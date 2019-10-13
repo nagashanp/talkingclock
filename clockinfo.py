@@ -51,4 +51,4 @@ def translate(Input):
  if(type(Input) is str):
     return speech(Input)
  else:
-    return 'Invalid Input; must be a list of time strings or a single time string (":" included)'
+    return 'Invalid Input; must be  time string (":" included)'
