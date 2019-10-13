@@ -52,9 +52,7 @@ def speech(time):
   return readMinutes(minute) +' '+ Mapper[hour%12]
 
 def translate(Input):
- if type(Input) is list:
-    return map(speech, Input)
- elif(type(Input) is str):
+ if(type(Input) is str):
     return speech(Input)
  else:
     return 'Invalid Input; must be a list of time strings or a single time string (":" included)'
