@@ -19,11 +19,13 @@ Examples
 example 1: ( with no parameters - shows the current system time)
 
 $ python3 showclock.py 
+
 twenty seven past  seven
 
 example 2: ( with parameter)
 
 $ python3 showclock.py 20:45
+
 fifteen to  nine
 
 
