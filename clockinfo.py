@@ -1,3 +1,5 @@
+import time
+
 Mapper = {
 
 0:'twelve',
@@ -49,6 +51,11 @@ def speech(time):
 
 def translate(Input):
  if(type(Input) is str):
-    return speech(Input)
+    try:
+       time.strptime(Input, '%H:%M')
+       return speech(Input)
+    except ValueError:
+       return ' Invalid Input; must be time string in hh:mm format '
  else:
-    return 'Invalid Input; must be  time string (":" included)'
+    return 'Invalid Input; must be time string (":" included)'
+  
