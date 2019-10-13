@@ -38,10 +38,6 @@ def readMinutes(value):
    x = 60 - value
    return Mapper[x] + ' ' +'to '
 
-def AmOrPm(value):
-  if value%12 == value: return 'am'
-  return 'pm'
-
 def speech(time):
   if (':' not in time): return 'Not a valid time input; required format is [hh]:[mm]'
   hour, minute = map(int, time.split(':'))
