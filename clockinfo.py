@@ -41,7 +41,7 @@ def readMinutes(value):
    return Mapper[x] + ' ' +'to '
 
 def speech(time):
-  if (':' not in time): return 'Not a valid time input; required format is [hh]:[mm]'
+  if (':' not in time): return 'Not a valid time input, required format is [hh]:[mm]'
   hour, minute = map(int, time.split(':'))
   if minute == 0 : return Mapper[hour%12]  +' '  +' o\'clock'
   if minute > 30 :
@@ -55,7 +55,7 @@ def translate(Input):
        time.strptime(Input, '%H:%M')
        return speech(Input)
     except ValueError:
-       return ' Invalid Input; must be time string in hh:mm format '
+       return ' Invalid Input; time must be between 00:00 (hh:mm) - 23:59 (hh:mm)'
  else:
     return 'Invalid Input; must be time string (":" included)'
   
